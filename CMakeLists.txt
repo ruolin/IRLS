@@ -1,0 +1,5 @@
+include_directories(${PROJECT_SOURCE_DIR}/external/gsl-2.3)
+link_directories(${PROJECT_SOURCE_DIR}/external/gsl-2.3/lib)
+add_executable(irls main.cc test.cpp parser.cc controller.cc IRLS.cc LogLink.cc)
+target_link_libraries(irls m gsl gslcblas)
+message("new executable irls")
